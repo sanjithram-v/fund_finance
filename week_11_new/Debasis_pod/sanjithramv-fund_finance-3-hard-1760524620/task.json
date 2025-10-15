@@ -1,3 +1,4 @@
+#Please reformat this file first, you can use online tool like https://jsonformatter.curiousconcept.com/#
 {
     "env": "fund_finance",
     "model_provider": "fireworks",
@@ -122,6 +123,7 @@
     "updated_at": "2025-10-01T00:00:00"
                 }
             },
+            #There should be one register_new_audit_trail after each CUD operation. 
             {
                 "name": "manipulate_invoice",
                 "arguments": {
@@ -150,6 +152,7 @@
                     "success": true
                 }
             },
+            #This register_new_audit_trail should be for invoice creation.
             {
                 "name": "register_new_audit_trail",
                 "arguments": {
@@ -235,6 +238,7 @@
                     "input": "commitment_amount, commitment_date"
                 }
             },
+            #You will have to add edges for register_new_audit_trail here.
             {
                 "from": "register_commitment",
                 "to": "manipulate_invoice",
@@ -279,3 +283,4 @@
         "num_edges": 13
     }
 }
+
